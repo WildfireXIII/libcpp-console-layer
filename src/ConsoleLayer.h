@@ -31,25 +31,25 @@ namespace dwl
 		
 		public:
 			// color values
-			static const BLACK = 0;
-			static const RED = 1;
-			static const GREEN = 2;
-			static const YELLOW = 3;
-			static const BLUE
-			static const MAGENTA = 5;
-			static const CYAN = 6;
-			static const WHITE = 7;
-			static const LIGHTBLACK = 8;
-			static const LIGHTRED = 9;
-			static const LIGHTGREEN = 10;
-			static const LIGHTYELLOW = 11;
-			static const LIGHTBLUE = 12;
-			static const LIGHTMAGENTA = 13;
-			static const LIGHTCYAN = 14;
-			static const LIGHTWHITE = 15;
+			static const int BLACK = 0;
+			static const int RED = 1;
+			static const int GREEN = 2;
+			static const int YELLOW = 3;
+			static const int BLUE = 4;
+			static const int MAGENTA = 5;
+			static const int CYAN = 6;
+			static const int WHITE = 7;
+			static const int LIGHTBLACK = 8;
+			static const int LIGHTRED = 9;
+			static const int LIGHTGREEN = 10;
+			static const int LIGHTYELLOW = 11;
+			static const int LIGHTBLUE = 12;
+			static const int LIGHTMAGENTA = 13;
+			static const int LIGHTCYAN = 14;
+			static const int LIGHTWHITE = 15;
 
-			ConsoleLayer();
-			~ConsoleLayer();
+			/*ConsoleLayer();
+			~ConsoleLayer();*/
 
 			// color
 			void setFGColor(int color);
