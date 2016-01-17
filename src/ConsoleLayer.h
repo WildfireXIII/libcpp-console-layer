@@ -53,7 +53,7 @@ namespace dwl
 
 			// color
 			void setFGColor(int color);
-			void setBGColor(int color); // dont' forget that in linux you can't set the bold colors as bg (anything over 7)
+			/*void setBGColor(int color); // dont' forget that in linux you can't set the bold colors as bg (anything over 7)
 
 			// positioning
 			void setCursorPos(int x, int y);
@@ -67,7 +67,7 @@ namespace dwl
 			void storeCursorPos();
 			void restoreCursorPos();
 			
-			void clear();
+			void clear();*/
 	};
 }
 
