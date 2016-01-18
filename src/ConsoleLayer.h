@@ -66,10 +66,12 @@ namespace dwl
 
 			void storeCursorPos();
 			void restoreCursorPos();
-			
-			/*void clear();*/
 
-			//int getNextKeyPress(); // waits for next key press and returns with key code?
+			// misc
+			void getConsoleSize(int* width, int* height);
+			void clear();
+
+			int getNextKeyPress(); // waits for next key press and returns with key code?
 	};
 }
 
