@@ -1,7 +1,7 @@
 //*************************************************************
 //  File: ConsoleLayer.h
 //  Date created: 1/16/2016
-//  Date edited: 1/16/2016
+//  Date edited: 1/17/2016
 //  Author: Nathan Martindale
 //  Copyright © 2016 Digital Warrior Labs
 //  Description: Cross-platform console manipulation library
@@ -57,9 +57,9 @@ namespace dwl
 
 			// positioning
 			void setCursorPos(int x, int y);
-			/*void getCursorPos(int* x, int* y); // assigns into the passed x and y
+			void getCursorPos(int* x, int* y); // assigns into the passed x and y
 
-			void moveCursorDown(int times);
+			/*void moveCursorDown(int times);
 			void moveCursorUp(int times);
 			void moveCursorLeft(int times);
 			void moveCursorRight(int times);
