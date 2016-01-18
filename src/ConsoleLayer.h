@@ -17,6 +17,9 @@
 #endif // _WIN32
 
 #ifdef linux
+	#include <unistd.h>
+	#include <termios.h>
+	#include <stdio.h>
 #endif // linux
 
 using namespace std;
