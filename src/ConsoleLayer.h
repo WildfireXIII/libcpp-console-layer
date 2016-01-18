@@ -59,7 +59,7 @@ namespace dwl
 			void setCursorPos(int x, int y);
 			void getCursorPos(int* x, int* y); // assigns into the passed x and y
 
-			/*void moveCursorDown(int times);
+			void moveCursorDown(int times);
 			void moveCursorUp(int times);
 			void moveCursorLeft(int times);
 			void moveCursorRight(int times);
@@ -67,7 +67,7 @@ namespace dwl
 			void storeCursorPos();
 			void restoreCursorPos();
 			
-			void clear();*/
+			/*void clear();*/
 
 			//int getNextKeyPress(); // waits for next key press and returns with key code?
 	};
