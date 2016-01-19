@@ -1,0 +1,4 @@
+TODO:
+
+- Add home function (moves cursor to beginning of line)
+- Add clear line function (careful about very last space so doesn't automatically go to next line?)
