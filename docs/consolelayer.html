@@ -1,0 +1,263 @@
+<html>
+	<head>
+		<title>ConsoleLayer</title>
+		<link rel='stylesheet' type='text/css' href='api_style.css'>
+		<script src='SidebarDriver.js'></script>
+		<script src='sections.js'></script>
+		<script src='classes.js'></script>
+		<script src='interfaces.js'></script>
+		<script src='files.js'></script>
+		<script>selectedSectionIndex = 0;</script>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+	</head>
+	<body>
+
+<div id='top_band'></div>
+<div id='logo_header_area'><h1 onclick='window.location="index.html"'>C++ Console Layer </h1></div>
+<div id='side_bar' onclick='sidebarClick()'>
+	<div id='side_sections'></div>
+	<div id='side_section_contents'></div>
+</div>
+<div id='content'>
+	<h1>Class <span class='keyword'>ConsoleLayer</span></h1>
+	<p>Cross-platform library for common console functions such as color manipulation,cursor positioning, and getting raw keypress data.</p>
+
+	<hr/>
+	<p class='tabbedText'><a href='#functionindex'>Function Index</a></p>
+	<p class='tabbedText'><a href='#constantlist'>Constant List</a></p>
+	<p class='tabbedText'><a href='#functionlist'>Function List</a></p>
+	<hr/>
+
+	<a name='functionindex'></a>
+	<h2>Function Index</h2>
+	<p>Click on any of the following function names to see more detail about them below.</p>
+	<table class='dataTable'>
+		<tr><th>Modifier/Return Type</th><th>Function Name</th></tr>
+		<tr class='row1'>
+			<td class='return_modifier_box'><code><span class='keyword'>void</span></code></td>
+			<td><code><a href='#function0'>clear</a>()</code></td>
+		</tr>
+		<tr class='row2'>
+			<td class='return_modifier_box'><code><span class='keyword'>void</span></code></td>
+			<td><code><a href='#function1'>getConsoleSize</a>(<span class='keyword'>int*</span> width, <span class='keyword'>int*</span> height)</code></td>
+		</tr>
+		<tr class='row1'>
+			<td class='return_modifier_box'><code><span class='keyword'>void</span></code></td>
+			<td><code><a href='#function2'>getCursorPos</a>(<span class='keyword'>int*</span> x, <span class='keyword'>int*</span> y)</code></td>
+		</tr>
+		<tr class='row2'>
+			<td class='return_modifier_box'><code><span class='keyword'>int</span></code></td>
+			<td><code><a href='#function3'>getNextKeyPress</a>()</code></td>
+		</tr>
+		<tr class='row1'>
+			<td class='return_modifier_box'><code><span class='keyword'>void</span></code></td>
+			<td><code><a href='#function4'>moveCursorDown</a>(<span class='keyword'>int</span> times)</code></td>
+		</tr>
+		<tr class='row2'>
+			<td class='return_modifier_box'><code><span class='keyword'>void</span></code></td>
+			<td><code><a href='#function5'>moveCursorLeft</a>(<span class='keyword'>int</span> times)</code></td>
+		</tr>
+		<tr class='row1'>
+			<td class='return_modifier_box'><code><span class='keyword'>void</span></code></td>
+			<td><code><a href='#function6'>moveCursorRight</a>(<span class='keyword'>int</span> times)</code></td>
+		</tr>
+		<tr class='row2'>
+			<td class='return_modifier_box'><code><span class='keyword'>void</span></code></td>
+			<td><code><a href='#function7'>moveCursorUp</a>(<span class='keyword'>int</span> times)</code></td>
+		</tr>
+		<tr class='row1'>
+			<td class='return_modifier_box'><code><span class='keyword'>void</span></code></td>
+			<td><code><a href='#function8'>restoreCursorPos</a>()</code></td>
+		</tr>
+		<tr class='row2'>
+			<td class='return_modifier_box'><code><span class='keyword'>void</span></code></td>
+			<td><code><a href='#function9'>setBGColor</a>(<span class='keyword'>int</span> color)</code></td>
+		</tr>
+		<tr class='row1'>
+			<td class='return_modifier_box'><code><span class='keyword'>void</span></code></td>
+			<td><code><a href='#function10'>setCursorPos</a>(<span class='keyword'>int</span> x, <span class='keyword'>int</span> y)</code></td>
+		</tr>
+		<tr class='row2'>
+			<td class='return_modifier_box'><code><span class='keyword'>void</span></code></td>
+			<td><code><a href='#function11'>setFGColor</a>(<span class='keyword'>int</span> color)</code></td>
+		</tr>
+		<tr class='row1'>
+			<td class='return_modifier_box'><code><span class='keyword'>void</span></code></td>
+			<td><code><a href='#function12'>storeCursorPos</a>()</code></td>
+		</tr>
+	</table>
+
+</br>
+<hr/>
+
+	<a name='constantlist'></a>
+	<h3>Constant List</h3>
+	<table class='dataTable'>
+		<tr class='row1'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> BLACK</code></td>
+		</tr>
+		<tr class='row2'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> BLUE</code></td>
+		</tr>
+		<tr class='row1'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> CYAN</code></td>
+		</tr>
+		<tr class='row2'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> GREEN</code></td>
+		</tr>
+		<tr class='row1'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> LIGHTBLACK</code> - This represents 'dark grey'.</td>
+		</tr>
+		<tr class='row2'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> LIGHTBLUE</code></td>
+		</tr>
+		<tr class='row1'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> LIGHTCYAN</code></td>
+		</tr>
+		<tr class='row2'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> LIGHTGREEN</code></td>
+		</tr>
+		<tr class='row1'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> LIGHTMAGENTA</code></td>
+		</tr>
+		<tr class='row2'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> LIGHTRED</code></td>
+		</tr>
+		<tr class='row1'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> LIGHTWHITE</code> - This is actually white!</td>
+		</tr>
+		<tr class='row2'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> LIGHTYELLOW</code></td>
+		</tr>
+		<tr class='row1'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> MAGENTA</code></td>
+		</tr>
+		<tr class='row2'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> RED</code></td>
+		</tr>
+		<tr class='row1'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> WHITE</code> - This represents 'silver', not white.</td>
+		</tr>
+		<tr class='row2'>
+			<td><code class='biggerCode'><span class='keyword'>static const int</span> YELLOW</code></td>
+		</tr>
+	</table>
+
+</br>
+<hr/>
+
+	<a name='functionlist'></a>
+	<h3>Function List</h3>
+	<table class='dataTable'>
+		<tr class='row1'>
+			<td>
+				<a name='function0'></a><span class='function_title'>clear</span></br><code class='biggerCode'><span class='keyword'>void</span> clear()</code></br></br>
+				<p>Clears the console buffer.</p>
+			</td>
+		</tr>
+		<tr class='row2'>
+			<td>
+				<a name='function1'></a><span class='function_title'>getConsoleSize</span></br><code class='biggerCode'><span class='keyword'>void</span> getConsoleSize(<span class='keyword'>int*</span> width, <span class='keyword'>int*</span> height)</code></br></br>
+				<p>Sets passed width and height variables to the current buffer dimensions. NOTE: Buffer dimensions, not console window dimensions!</p>
+<p><b>Input Parameters</b></p>
+	<p class='tabbedText'><code class='mediumCode'><span class='keyword'>int*</span> width</code><span class='descriptionText'> - POST: Will point to the number of buffer columns.</span></p>
+	<p class='tabbedText'><code class='mediumCode'><span class='keyword'>int*</span> height</code><span class='descriptionText'> - POST: Will point to the number of buffer rows.</span></p>
+				<p><b>Output</b></p>
+				<p class='tabbedText'>The passed width and height pointers will point to the dimensions of the console buffer.</p>
+			</td>
+		</tr>
+		<tr class='row1'>
+			<td>
+				<a name='function2'></a><span class='function_title'>getCursorPos</span></br><code class='biggerCode'><span class='keyword'>void</span> getCursorPos(<span class='keyword'>int*</span> x, <span class='keyword'>int*</span> y)</code></br></br>
+				<p>Sets passed x and y variables to the current cursor position.</p>
+<p><b>Input Parameters</b></p>
+	<p class='tabbedText'><code class='mediumCode'><span class='keyword'>int*</span> x</code><span class='descriptionText'> - POST: Will point to the current cursor column.</span></p>
+	<p class='tabbedText'><code class='mediumCode'><span class='keyword'>int*</span> y</code><span class='descriptionText'> - POST: Will point to the current cursor row.</span></p>
+				<p><b>Output</b></p>
+				<p class='tabbedText'>The passed x and y pointers will point to the current coordinates of the cursor.</p>
+			</td>
+		</tr>
+		<tr class='row2'>
+			<td>
+				<a name='function3'></a><span class='function_title'>getNextKeyPress</span></br><code class='biggerCode'><span class='keyword'>int</span> getNextKeyPress()</code></br></br>
+				<p>Puts the console in raw input mode until a key is hit, then returns that key code. (NOTE: This function hangs program operation until a key is hit.)</p>
+				<p><b>Output</b></p>
+				<p class='tabbedText'>Returns the key code for pressed key. Note that this varies per operating system. For Windows, check <a href='https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx'>MSDN Virtual-Key Codes</a>. Linux is just weird....</p>
+			</td>
+		</tr>
+		<tr class='row1'>
+			<td>
+				<a name='function4'></a><span class='function_title'>moveCursorDown</span></br><code class='biggerCode'><span class='keyword'>void</span> moveCursorDown(<span class='keyword'>int</span> times)</code></br></br>
+				<p>Moves cursor down a specified number of rows.</p>
+<p><b>Input Parameters</b></p>
+	<p class='tabbedText'><code class='mediumCode'><span class='keyword'>int</span> times</code><span class='descriptionText'> - Number of rows to move down.</span></p>
+			</td>
+		</tr>
+		<tr class='row2'>
+			<td>
+				<a name='function5'></a><span class='function_title'>moveCursorLeft</span></br><code class='biggerCode'><span class='keyword'>void</span> moveCursorLeft(<span class='keyword'>int</span> times)</code></br></br>
+				<p>Moves cursor left a specified number of cols.</p>
+<p><b>Input Parameters</b></p>
+	<p class='tabbedText'><code class='mediumCode'><span class='keyword'>int</span> times</code><span class='descriptionText'> - Number of cols to move left.</span></p>
+			</td>
+		</tr>
+		<tr class='row1'>
+			<td>
+				<a name='function6'></a><span class='function_title'>moveCursorRight</span></br><code class='biggerCode'><span class='keyword'>void</span> moveCursorRight(<span class='keyword'>int</span> times)</code></br></br>
+				<p>Moves cursor right a specified number of cols.</p>
+<p><b>Input Parameters</b></p>
+	<p class='tabbedText'><code class='mediumCode'><span class='keyword'>int</span> times</code><span class='descriptionText'> - Number of cols to move right.</span></p>
+			</td>
+		</tr>
+		<tr class='row2'>
+			<td>
+				<a name='function7'></a><span class='function_title'>moveCursorUp</span></br><code class='biggerCode'><span class='keyword'>void</span> moveCursorUp(<span class='keyword'>int</span> times)</code></br></br>
+				<p>Moves cursor up a specified number of rows.</p>
+<p><b>Input Parameters</b></p>
+	<p class='tabbedText'><code class='mediumCode'><span class='keyword'>int</span> times</code><span class='descriptionText'> - Number of rows to move up.</span></p>
+			</td>
+		</tr>
+		<tr class='row1'>
+			<td>
+				<a name='function8'></a><span class='function_title'>restoreCursorPos</span></br><code class='biggerCode'><span class='keyword'>void</span> restoreCursorPos()</code></br></br>
+				<p>Moves cursor to previously stored position. (MUST have previously stored position!) NOTE: This is buffer position, so keep in mind that if you've reached the end of the buffer and are printing out more things, the position will not be on the same CHARACTER as before, only the same place in the buffer.)</p>
+			</td>
+		</tr>
+		<tr class='row2'>
+			<td>
+				<a name='function9'></a><span class='function_title'>setBGColor</span></br><code class='biggerCode'><span class='keyword'>void</span> setBGColor(<span class='keyword'>int</span> color)</code></br></br>
+				<p>Changes the background color at the cursor.</p>
+<p><b>Input Parameters</b></p>
+	<p class='tabbedText'><code class='mediumCode'><span class='keyword'>int</span> color</code><span class='descriptionText'> - Color constant, use values in the constant list above.</span></p>
+			</td>
+		</tr>
+		<tr class='row1'>
+			<td>
+				<a name='function10'></a><span class='function_title'>setCursorPos</span></br><code class='biggerCode'><span class='keyword'>void</span> setCursorPos(<span class='keyword'>int</span> x, <span class='keyword'>int</span> y)</code></br></br>
+				<p>Moves the cursor to the passed x and y coordinates.</p>
+<p><b>Input Parameters</b></p>
+	<p class='tabbedText'><code class='mediumCode'><span class='keyword'>int</span> x</code><span class='descriptionText'> - Sets cursor column.</span></p>
+	<p class='tabbedText'><code class='mediumCode'><span class='keyword'>int</span> y</code><span class='descriptionText'> - Sets cursor row.</span></p>
+			</td>
+		</tr>
+		<tr class='row2'>
+			<td>
+				<a name='function11'></a><span class='function_title'>setFGColor</span></br><code class='biggerCode'><span class='keyword'>void</span> setFGColor(<span class='keyword'>int</span> color)</code></br></br>
+				<p>Changes the foreground color at the cursor.</p>
+<p><b>Input Parameters</b></p>
+	<p class='tabbedText'><code class='mediumCode'><span class='keyword'>int</span> color</code><span class='descriptionText'> - Color constant, use values in the constant list above.</span></p>
+			</td>
+		</tr>
+		<tr class='row1'>
+			<td>
+				<a name='function12'></a><span class='function_title'>storeCursorPos</span></br><code class='biggerCode'><span class='keyword'>void</span> storeCursorPos()</code></br></br>
+				<p>Internally stores current cursor position.</p>
+			</td>
+		</tr>
+	</table>
+	</div>
+	<div id='bottom_band_container'><div id='bottom_band'>
+		<div id='footer_center'><p><i>Generated by Document It engine 2.0.0</i></br>Copyright © 2016 Digital Warrior Labs</p>
+	</div></div>
+</body>
+</html>
